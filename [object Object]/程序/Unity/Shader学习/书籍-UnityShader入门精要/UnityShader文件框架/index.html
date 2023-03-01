@@ -1,0 +1,419 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>UnityShader文件框架 | 时间·线</title><meta name="keywords" content="程序,Unity,Shader学习,书籍-UnityShader入门精要"><meta name="author" content="HiDolen"><meta name="copyright" content="HiDolen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Unity Shader 的结构 shader文件内的代码框架示例如下。 123456789101112131415Shader &quot;My&#x2F;MyFirstShader&quot;&amp;#123;    Properties &#x2F;&#x2F;属性，材质与 Shader 的通讯信息    &amp;#123;        _MainTex (&quot;Texture&quot;, 2D) &#x3D; &quot;whi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UnityShader文件框架">
+<meta property="og:url" content="http://example.com/[object%20Object]/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/UnityShader%E6%96%87%E4%BB%B6%E6%A1%86%E6%9E%B6/index.html">
+<meta property="og:site_name" content="时间·线">
+<meta property="og:description" content="Unity Shader 的结构 shader文件内的代码框架示例如下。 123456789101112131415Shader &quot;My&#x2F;MyFirstShader&quot;&amp;#123;    Properties &#x2F;&#x2F;属性，材质与 Shader 的通讯信息    &amp;#123;        _MainTex (&quot;Texture&quot;, 2D) &#x3D; &quot;whi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-09-08T06:42:40.000Z">
+<meta property="article:modified_time" content="2022-09-08T06:42:40.644Z">
+<meta property="article:author" content="HiDolen">
+<meta property="article:tag" content="程序">
+<meta property="article:tag" content="Unity">
+<meta property="article:tag" content="Shader学习">
+<meta property="article:tag" content="书籍-UnityShader入门精要">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/[object%20Object]/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/UnityShader%E6%96%87%E4%BB%B6%E6%A1%86%E6%9E%B6/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'UnityShader文件框架',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-09-08 14:42:40'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">110</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">45</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">46</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">时间·线</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">UnityShader文件框架</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-09-08T06:42:40.644Z" title="更新于 2022-09-08 14:42:40">2022-09-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="UnityShader文件框架"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="unity-shader-的结构"><a class="markdownIt-Anchor" href="#unity-shader-的结构"></a> Unity Shader 的结构</h2>
+<p><code>shader</code>文件内的代码框架示例如下。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Shader <span class="string">&quot;My/MyFirstShader&quot;</span></span><br><span class="line">&#123;</span><br><span class="line">    Properties <span class="comment">//属性，材质与 Shader 的通讯信息</span></span><br><span class="line">    &#123;</span><br><span class="line">        _MainTex (<span class="string">&quot;Texture&quot;</span>, <span class="number">2</span>D) = <span class="string">&quot;white&quot;</span> &#123;&#125; <span class="comment">//必须加下划线</span></span><br><span class="line">    &#125;</span><br><span class="line">    SubShader</span><br><span class="line">    &#123;</span><br><span class="line">        Pass</span><br><span class="line">        &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Fallback <span class="string">&quot;VertexLit&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="properties"><a class="markdownIt-Anchor" href="#properties"></a> Properties</h2>
+<p>材质面板上需要显示设置的内容都写在这里。</p>
+<h3 id="语法格式"><a class="markdownIt-Anchor" href="#语法格式"></a> 语法格式</h3>
+<blockquote>
+<p>[Attribute]_Name (“Display Name”, Type) = Default Value</p>
+</blockquote>
+<ul>
+<li>
+<p><code>Attribute</code><br />
+属性标记。可选</p>
+<ul>
+<li>[NoScaleOffset]，不允许在材质面板上设置纹理的偏移</li>
+<li>[Header(Header Name)]，在材质面板上，分组</li>
+<li>[HideInInspector]，在材质面板上隐藏此参数</li>
+</ul>
+</li>
+<li>
+<p><code>_Name</code><br />
+变量名。必须加下划线</p>
+</li>
+<li>
+<p><code>Display Name</code><br />
+显示在材质面板上的名称，起到说明作用</p>
+</li>
+<li>
+<p><code>Type</code><br />
+属性的类型。常用类型如下：</p>
+<table>
+<thead>
+<tr>
+<th>属性类型</th>
+<th>默认值的定义语法</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Int</td>
+<td>number</td>
+<td>_Int(“Int”,Int)=2</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>number</td>
+<td>_Float(“Float”,Float)=1.5</td>
+</tr>
+<tr>
+<td>Range(min,max)</td>
+<td>number</td>
+<td>_Range(“Range”,Range(0.0, 5.0))=3.0</td>
+</tr>
+<tr>
+<td>Color</td>
+<td>(number,number,number,number)</td>
+<td>_Color(“Color”,Color)=(1,1,1,1)</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>(number,number,number,number)</td>
+<td>_Vector(“Vector”,Vector)=(2,3,6,6)</td>
+</tr>
+<tr>
+<td>2D</td>
+<td>“defaulttexture”{}</td>
+<td>_2D(“2D”,2D)=“”{}</td>
+</tr>
+<tr>
+<td>Cube</td>
+<td>“defaulttexture”{}</td>
+<td>_Cube(“Cube”,Cube)=“white”{}</td>
+</tr>
+<tr>
+<td>3D</td>
+<td>“defaulttexture”{}</td>
+<td>_3D(“3D”,3D)=“black”{}</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Range，隐性代表Float，在材质面板上生成一个滑条。用法示例：<code>Range(0, 1)</code>。
+<ul>
+<li>可以配合属性标记<code>[PowerSlider(n)]</code>来控制滑条精度</li>
+<li>若存在属性标记<code>[IntRange]</code>，滑条只能固定在整数值上</li>
+<li>若存在属性标记<code>[Toggle]</code>，会在 0 和 1 中设置</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Default Value</code><br />
+默认值</p>
+</li>
+</ul>
+<h2 id="subshader"><a class="markdownIt-Anchor" href="#subshader"></a> SubShader</h2>
+<p>每个 Unity Shader 文件可以包含多个 <code>SubShader</code> 块，至少一个。<br />
+其定义通常如下，</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SubShader&#123;</span><br><span class="line">  [<span class="meta">RenderSetup</span>] <span class="comment">//可在 Pass 块中单独进行设置</span></span><br><span class="line">  [<span class="meta">Tags</span>]</span><br><span class="line">  Pass&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="rendersetup状态设置"><a class="markdownIt-Anchor" href="#rendersetup状态设置"></a> [RenderSetup]（状态设置）</h3>
+<p>可以设置显卡状态，例如是否开启混合/深度测试、是否进行背面剔除。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>设置指令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cull</td>
+<td>cull back/front/off</td>
+<td>设置剔除模式：剔除背面（默认）、剔除正面、不剔除</td>
+</tr>
+<tr>
+<td>ztest</td>
+<td>ztest less greater/lequal/gequal/equal/notequal/always</td>
+<td>深度测试时使用的函数</td>
+</tr>
+<tr>
+<td>zwrite</td>
+<td>zwrite on/off</td>
+<td>是否开启深度写入</td>
+</tr>
+<tr>
+<td>blend</td>
+<td>blend srcfactor/dstfactor</td>
+<td>开启并设置混合模式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tags标签"><a class="markdownIt-Anchor" href="#tags标签"></a> [Tags]（标签）</h3>
+<p>是一个字符串类型键值对，告诉 Unity 渲染引擎如何渲染对象。</p>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>说明</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Queue</td>
+<td>指定该物体属于哪一个渲染队列，控制渲染顺序</td>
+<td>Tags{“Queue”=“Transparent”}</td>
+</tr>
+<tr>
+<td>RenderType</td>
+<td>对着色器进行分类，用于着色器替换（Shader Replacement）</td>
+<td>Tags{“RenderType”=“Opaque”}</td>
+</tr>
+<tr>
+<td>DisableBatching</td>
+<td>指明是否对该 SubShader 使用批处理，避免某些情况下的问题</td>
+<td>Tags{“DisableBatching”=“True”}</td>
+</tr>
+<tr>
+<td>ForceNoShadowCasting</td>
+<td>使用该 SubShader 的物体是否会投射阴影</td>
+<td>Tags{“ForceNoShadowCasting”=“True”}</td>
+</tr>
+<tr>
+<td>IgnoreProjector</td>
+<td>物体是否受到 Projector 影响。通常用于半透明物体</td>
+<td>Tags{“IgnoreProjector”=“True”}</td>
+</tr>
+<tr>
+<td>CanUseSpriteAtlas</td>
+<td>若 SubShader 用于精灵 Sprites，将此标签设为 False</td>
+<td>Tags{“CanUseSpriteAtlas”=“False”}</td>
+</tr>
+<tr>
+<td>PreviewType</td>
+<td>如何预览该材质。默认为球形</td>
+<td>Tags{“PreviewType”=“Plane”}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pass"><a class="markdownIt-Anchor" href="#pass"></a> Pass</h3>
+<p>顶点着色器和片段着色器。</p>
+<p>首先，框架如下：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Pass</span><br><span class="line">&#123;</span><br><span class="line">  [<span class="meta">Name</span>]</span><br><span class="line">  [<span class="meta">Tags</span>]</span><br><span class="line">  [<span class="meta">RenderSetup</span>]</span><br><span class="line">  <span class="comment">//其他代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>[Name]，若是写成 <code>Name &quot;MyPass&quot;</code>，通过 <code>UsePass &quot;Example/SomeShader/MYPASS&quot;</code>，其他 SubShader 可以使用这段 Pass</p>
+</li>
+<li>
+<p>[Tag]，类似 SubShade 的标签</p>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>说明</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LightMode</td>
+<td>该 Pass 在 Unity 的渲染流水线中的角色</td>
+<td>Tags{“LightMode”=“ForwardBase”}</td>
+</tr>
+<tr>
+<td>RequireOptions</td>
+<td>满足某些条件时才渲染这个 Pass</td>
+<td>Tags{“RequireOptions”=“SoftVegetation”}</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p>一个示例，</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Pass</span><br><span class="line">&#123;</span><br><span class="line">    CGPROGRAM</span><br><span class="line"></span><br><span class="line">    <span class="meta">#<span class="keyword">pragma</span> vertex vert //指定顶点着色器的名字</span></span><br><span class="line">    <span class="meta">#<span class="keyword">pragma</span> fragment frag //指定片段着色器的名字</span></span><br><span class="line"></span><br><span class="line">    fixed4 _Color; <span class="comment">//引用在 Properties 中的变量 _Color</span></span><br><span class="line"></span><br><span class="line">    <span class="function">float4 <span class="title">vert</span>(<span class="params">float4 vertex : POSITION</span>) : SV_POSITION</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> UnityObjectToClipPos(vertex); <span class="comment">//矩阵转换，将模型显示在二维显示器上</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function">fixed4 <span class="title">frag</span>() : SV_TARGET</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> _Color;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ENDCG</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>两个特殊的 Pass 段：</p>
+<ul>
+<li><code>UsePass</code>，使用其它 Unity Shader 中的 Pass</li>
+<li><code>GrabPass</code>，抓取屏幕并将结果存储在一张纹理中，以用于后续的 Pass 处理</li>
+</ul>
+<h4 id="cghlsl-中的数据类型"><a class="markdownIt-Anchor" href="#cghlsl-中的数据类型"></a> Cg/HLSL 中的数据类型</h4>
+<p>ShaderLab 中属性的类型和 Cg 中变量的类型之间的匹配关系如下：</p>
+<table>
+<thead>
+<tr>
+<th>ShaderLab 属性类型</th>
+<th>Cg 变量类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color, Vector</td>
+<td>float4, half4, fixed4</td>
+</tr>
+<tr>
+<td>Range, Float</td>
+<td>float, half, fixed</td>
+</tr>
+<tr>
+<td>2D</td>
+<td>sampler2D</td>
+</tr>
+<tr>
+<td>Cube</td>
+<td>samplerCube</td>
+</tr>
+<tr>
+<td>3D</td>
+<td>sampler3D</td>
+</tr>
+</tbody>
+</table>
+<h4 id="语义"><a class="markdownIt-Anchor" href="#语义"></a> 语义</h4>
+<p>一些变量会添加额外的语义，赋予变量特殊含义（就是冒号后面这串大写字母）。</p>
+<p>从程序输入到顶点着色器的数据：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> appdata</span><br><span class="line">&#123;</span><br><span class="line">    float4 vertex : POSITION;       <span class="comment">//顶点。模型空间的顶点，而不是裁剪空间的</span></span><br><span class="line">    float4 tangent : TANGENT;       <span class="comment">//切线</span></span><br><span class="line">    float3 normal : NORMAL;         <span class="comment">//法线。范围在 -1 到 1</span></span><br><span class="line">    float4 texcoord : TEXCOORD0;    <span class="comment">//UV1</span></span><br><span class="line">    float4 texcoord1 : TEXCOORD1;   <span class="comment">//UV2</span></span><br><span class="line">    float4 texcoord2 : TEXCOORD2;   <span class="comment">//UV3</span></span><br><span class="line">    float4 texcoord3 : TEXCOORD3;   <span class="comment">//UV4</span></span><br><span class="line">    fixed4 color : COLOR;           <span class="comment">//顶点色</span></span><br><span class="line">    <span class="built_in">float</span> face : VFACE;             <span class="comment">//如果渲染表面朝向摄像机，输出 1，反之则输出 -1</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>从顶点着色器输入到片断着色器的数据：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> v2f</span><br><span class="line">&#123;</span><br><span class="line">    float4 pos:SV_POSITION;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="fallback"><a class="markdownIt-Anchor" href="#fallback"></a> Fallback</h2>
+<p>可选的 Fallback 指令。若没有可以运行的 SubShader，就会使用指定的 shader。</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Fallback <span class="string">&quot;VertexLit&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="额外的结构"><a class="markdownIt-Anchor" href="#额外的结构"></a> 额外的结构</h2>
+<ul>
+<li>CustomEditor，自动逸材质面板的编辑界面</li>
+<li>Category，对 Unity Shader 中的命令进行分组</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">HiDolen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/[object%20Object]/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/UnityShader%E6%96%87%E4%BB%B6%E6%A1%86%E6%9E%B6/">http://example.com/[object%20Object]/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/UnityShader%E6%96%87%E4%BB%B6%E6%A1%86%E6%9E%B6/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">时间·线</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%A8%8B%E5%BA%8F/">程序</a><a class="post-meta__tags" href="/tags/Unity/">Unity</a><a class="post-meta__tags" href="/tags/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><a class="post-meta__tags" href="/tags/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Python/%E5%BA%93/threading/-demo/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">-demo</div></div></a></div><div class="next-post pull-right"><a href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/Unity%E7%9A%84%E5%86%85%E7%BD%AE%E5%86%85%E5%AE%B9/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Unity的内置内容</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/Unity%E7%9A%84%E5%86%85%E7%BD%AE%E5%86%85%E5%AE%B9/" title="Unity的内置内容"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-08</div><div class="title">Unity的内置内容</div></div></a></div><div><a href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E5%85%B3%E4%BA%8E%E6%B8%B2%E6%9F%93%E7%AE%A1%E7%BA%BF/" title="关于渲染管线"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-08</div><div class="title">关于渲染管线</div></div></a></div><div><a href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E5%87%A0%E7%A7%8D%E7%BC%96%E5%86%99UnityShader%E6%96%B9%E5%BC%8F/" title="几种编写UnityShader方式"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-08</div><div class="title">几种编写UnityShader方式</div></div></a></div><div><a href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/" title="数学基础"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-08</div><div class="title">数学基础</div></div></a></div><div><a href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E5%85%89%E7%85%A7/%E5%85%89%E7%85%A7/" title="光照"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-08</div><div class="title">光照</div></div></a></div><div><a href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/Shader%E5%B8%B8%E8%A7%81%E5%8F%82%E6%95%B0/" title="Shader常见参数"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-09-08</div><div class="title">Shader常见参数</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">HiDolen</div><div class="author-info__description">HiDolen 的个人博客。平时写的笔记都在这里</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">110</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">45</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">46</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#unity-shader-%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">1.</span> <span class="toc-text"> Unity Shader 的结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#properties"><span class="toc-number">2.</span> <span class="toc-text"> Properties</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E6%A0%BC%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text"> 语法格式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#subshader"><span class="toc-number">3.</span> <span class="toc-text"> SubShader</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rendersetup%E7%8A%B6%E6%80%81%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text"> [RenderSetup]（状态设置）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tags%E6%A0%87%E7%AD%BE"><span class="toc-number">3.2.</span> <span class="toc-text"> [Tags]（标签）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pass"><span class="toc-number">3.3.</span> <span class="toc-text"> Pass</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cghlsl-%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.3.1.</span> <span class="toc-text"> Cg&#x2F;HLSL 中的数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89"><span class="toc-number">3.3.2.</span> <span class="toc-text"> 语义</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fallback"><span class="toc-number">4.</span> <span class="toc-text"> Fallback</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%9D%E5%A4%96%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-number">5.</span> <span class="toc-text"> 额外的结构</span></a></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By HiDolen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

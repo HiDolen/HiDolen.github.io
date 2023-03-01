@@ -1,0 +1,509 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>时间·线 - HiDolen 写的些东西</title><meta name="keywords" content="个人博客,Unity,Python,大学,考研"><meta name="author" content="HiDolen"><meta name="copyright" content="HiDolen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="HiDolen 的个人博客。平时写的笔记都在这里">
+<meta property="og:type" content="website">
+<meta property="og:title" content="时间·线">
+<meta property="og:url" content="http://example.com/page/11/index.html">
+<meta property="og:site_name" content="时间·线">
+<meta property="og:description" content="HiDolen 的个人博客。平时写的笔记都在这里">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="HiDolen">
+<meta property="article:tag" content="个人博客,Unity,Python,大学,考研">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/11/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '时间·线',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-01 09:09:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">110</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">45</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">46</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">时间·线</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">时间·线</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/" title="微型计算机接口技术">微型计算机接口技术</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:36:17.000Z" title="发表于 2022-09-08 14:36:17">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">课堂笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/">大三上</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/">微型计算机接口技术</a></span></div><div class="content"> 第一章 基础
+
+计算机系统组成
+
+冯·诺依曼的计算机体系：
+
+存储器、运算器、控制器、输入设备、输出设备
+
+
+
+
+存储器的一些基本术语
+
+
+存储元，存储器的最小组成单位，存储 1 位二进制代码
+
+
+存储单元，CPU 访问存储器的基本单位，由存储元组成
+
+
+存储体，存储单元的集合，存放二进制信息
+
+
+单元地址，表示存储单元的编号，CPU 通过编号访问存储单元
+
+
+存储器，存储体和地址译码电路、读写控制电路等一起构成存储器
+综上，有：
+
+存储元 → 存储单元 → 存储体 → 存储器
+
+
+
+
+存储容量计算
+
+存储容量=字数×字长。如，字长 8 位，能存储 1024 个字，则容量 8k
+
+
+存储器分类
+
+SRAM，静态 RAM
+DRAM，动态 RAM
+ROM，只读存储器
+PROM，可编程 ROM。只能写一次
+EPPROM，可擦除 ROM
+Flash，闪存
+
+
+存储系统
+
+分级：寄存器  → Cache → 主存储器 → 辅助存储器
+
+
+存储器的组织
+
+通过地址总线、控制总线、数据总线与 CPU 连接
+
+地址线，决定存储容量
+数据线，决定字长为多少位
+
+
+
+
+存储器地址译码方式
+
+CPU 地址 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/%E5%BE%AE%E6%9C%BA%E6%8E%A5%E5%8F%A3%E5%A4%8D%E4%B9%A0/" title="微机接口复习">微机接口复习</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:36:17.000Z" title="发表于 2022-09-08 14:36:17">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">课堂笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/">大三上</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/">微型计算机接口技术</a></span></div><div class="content">8254，计数，用来输出信号，2脉冲 3矩形，有三个计数器
+8250，通信
+8255，定时器/计数器，会读入写出数据，a口 b口 c口
+8259A，中断
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/%E6%B1%87%E7%BC%96%E4%BC%AA%E6%8C%87%E4%BB%A4/" title="汇编伪指令">汇编伪指令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:36:17.000Z" title="发表于 2022-09-08 14:36:17">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">课堂笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/">大三上</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/">微型计算机接口技术</a></span></div><div class="content">
+
+RET，子程序的返回指令，栈顶数据出栈赋值给 IP 寄存器
+
+
+PROC，ENDP，定义程序块，用 CALL 关键字调用
+1234OTHER PROC      ...      RETOTHERS ENDP
+
+
+PUSHA，将 AX CX DX BX SP BP SI DI 都入栈。与之对应的是 POPA
+
+
+TEST，类似于 AND 做与运算，但不修改目标操作数。结果各位都为 0 时，ZF=1。可用 JZ 进行判断跳转
+
+
+SEG，取子程序的段基址。需要取子程序的偏移地址则用 OFFSET
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86C/%E7%90%90%E7%A2%8E/" title="琐碎">琐碎</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:36:17.000Z" title="发表于 2022-09-08 14:36:17">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">课堂笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/">大三上</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86C/">通信原理C</a></span></div><div class="content">
+
+dB 的含义
+
+表达比例数值。例如，信噪比达到 30dB 意味着：10log10(信/噪)=3010\mathrm{log}_{10}(信/噪)=3010log10​(信/噪)=30
+
+
+
+第一零点宽度
+
+信号频谱上左右第一个零点的宽度。一般为信道带宽的 2 倍，因为后者只取一边
+
+
+
+占空比
+
+通电时间相对总时间的占比
+
+
+
+信号带宽与码元的关系
+
+占空比为 1 的情况下，似乎就和码元传输速率在数值上一致。从题 9-15 得出的结论
+若占空比为 0.5，则第一零点带宽是传信率的 2 倍
+
+
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86C/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86C/" title="通信原理C">通信原理C</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:36:17.000Z" title="发表于 2022-09-08 14:36:17">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">课堂笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/">大三上</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E5%A4%A7%E4%B8%89%E4%B8%8A/%E9%80%9A%E4%BF%A1%E5%8E%9F%E7%90%86C/">通信原理C</a></span></div><div class="content"> 第一章 绪论
+ 通信系统一般模型
+信息源 -&gt; 发送设备 -&gt; 信道 -&gt; 接收设备 -&gt; 受信者
+其中，信道含有噪声源。
+ 通信系统分类与通信方式
+ 连续波调制
+线性调制：
+
+常规双边带调幅 AM
+双边带调幅 DSB
+单边带调幅 SSB
+残留边带调幅 VSB
+
+非线性调制：
+
+频率调制 FM
+相位调制 PM
+
+数字调制：
+
+振幅键控 ASK
+频移键控 FSK
+相移键控 PSK、DPSK、QPSK
+其他高效数字调制 QAM、MSK
+
+ 脉冲调制
+脉冲模拟调制：
+
+脉幅调制 PAM
+脉宽调制 PDM（PWM）
+脉位调制 PPM
+
+脉冲数字调制：
+
+脉码调制 PCM
+增量调制 DM（ΔM）
+差分脉码调制 DPCM
+其他话音编码方式 ADPCM
+
+ 通信系统的分类
+ 通信方式
+
+单工，只能单方向传输的工作方式
+半双工，通信双方都能收发消息，但不能同时进行收发
+全双工，通信双方可同时进行收发消息
+
+并行与串行：
+并行，数字信号码元序列以成组的方式在两条或以上的通道同时传输；
+串行，数字信号码元序列一个一个码元地在一条信道上传输。
+ 信息量 III
+消息 xxx 所含的 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/408/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="数据结构">数据结构</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:36:17.000Z" title="发表于 2022-09-08 14:36:17">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">课堂笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/">考研</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/408/">408</a></span></div><div class="content"> 第一章 绪论
+ 1.1 数据结构的基本概念
+术语，
+
+数据，字符符号集合，是计算机程序加工的原料
+数据元素，数据的基本单位。数据元素由数据项组成，数据项是构成数据元素的最小单位
+
+例如，学生记录是一个数据元素，由学号、姓名等数据项构成
+
+
+数据对象，具有相同性质的数据元素的集合
+
+是数据的子集，例如整数数据对象 N={0, ±1, ±2, …}
+
+
+数据类型
+
+原子类型，其值不可再分
+结构类型，可再分为若干数据类型
+抽象数据类型，抽象数据
+
+
+数据结构，是相互之间存在特定关系的数据元素的集合
+
+存储数据时，通常要存储各数据元素的值，以及数据元素之间的关系
+数据元素之间的关系称为结构，包括三个方面的内容：
+
+逻辑结构、存储结构、数据的运算
+
+
+
+
+
+数据结构三要素，
+
+逻辑结构，与数据的存储无关，独立于计算机
+
+线性结构，数据元素之间只存在一对一的关系，例如表、栈、队列、数组
+
+注意，像是栈，是一种抽象数据结构，可以采用顺序存储或链式存储。它不是存储结构
+
+
+非线性结构，例如集合、树、图
+
+集合，数据元素之间除 “同属一个集合” 外，别无其他关系
+树形结构，数据元素之间存在一对多的关系 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/408/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统">操作系统</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:36:17.000Z" title="发表于 2022-09-08 14:36:17">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">课堂笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/">考研</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/408/">408</a></span></div><div class="content"> 第一章 计算机系统概述
+ 1.1 操作系统的基本概念
+计算机系统自下而上大致分为：硬件、操作系统、应用程序、应用程序和用户。
+操作系统，是计算机系统中最基本的系统软件。
+操作系统的特征，
+
+并发，多个事件在同一时间间隔内发生
+
+操作系统的并发性是通过分时得以实现的
+并发与并行：并行是指具有同时运行的能力，需要有硬件支持
+
+单处理机下，进程与进程不能并行，但可以并发
+
+
+
+
+共享，指资源共享
+
+互斥共享方式，不允许同时访问；同时访问方式，允许同时访问
+临界区，进程中访问临界资源的代码
+临界资源，仅允许同时一个进程使用的共享资源
+
+
+虚拟，可归纳为：时分复用技术（例如 CPU），空分复用技术（例如虚拟存储器）
+异步，多个程序并发但不同步地执行
+
+操作系统必须保证，只要运行环境相同，进程的多次运行能得到一样的结果
+
+
+
+操作系统的功能，
+
+操作系统作为计算机系统资源的管理者
+
+处理机管理。可归结为进程的管理，包括进程生命周期控制、进程的并发等
+存储器管理。为多道程序的运行提供环境，主要包括内存分配与回收、地址映射等
+文件管理、设备管理
+
+
+操作系统作为用户与计算机硬件系统之间的接口
+
+命令 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" title="计算机网络">计算机网络</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:36:17.000Z" title="发表于 2022-09-08 14:36:17">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">课堂笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/">考研</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/408/">408</a></span></div><div class="content"> 第1章 计算机网络体系结构
+ 1.1 计算机网络概述
+计算机网络的组成，
+
+物理组成上，包括硬件、软件、协议
+
+硬件：主机、通信处理机、通信线路、交换设备
+
+
+工作方式上，分为边缘部分、核心部分
+
+边缘部分：所有连接在互联网上、供用户直接使用的主机
+核心部分：由大量的网络和连接这些网络的路由器组成，为边缘部分提供连通性和交换服务
+
+
+功能组成上，由通信子网、资源子网构成
+
+通信子网：各种传输介质、通信设备、响应的网络协议。为网络提供数据传输、交换和控制能力，实现联网计算机之间的数据通信
+
+通信子网包括物理层、数据链路层、网络层
+
+
+资源子网：主机、终端，各种软件资源、信息资源
+
+
+
+计算机网络的功能，
+
+数据通信
+资源共享
+分布式处理
+信息综合处理
+负载均衡
+提高可靠性
+
+计算机网络的分类，
+
+按分布范围分类
+
+广域网（WAN），城域网（MAN），局域网（LAN），个人区域网（PAN）
+
+
+按传输技术分类
+
+广播式网络，点对点网络
+
+
+按拓扑结构分类
+
+总线形网络，星形网络（以单独线路与中央设备相连），环形网络，网状结构
+
+
+按使用者分类
+
+公用网，专用网
+
+
+按交换技术分类
+
+电路 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" title="计算机组成原理">计算机组成原理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:36:17.000Z" title="发表于 2022-09-08 14:36:17">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/">课堂笔记</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/">考研</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/%E8%80%83%E7%A0%94/408/">408</a></span></div><div class="content"> 第1章 计算机系统概述
+ 1.1 计算机发展历程
+ 1.2 计算机系统层次结构
+计算机硬件，冯·诺依曼机，
+
+硬件系统组成：运算器、存储器、控制器、输入设备、输出设备
+
+关于存储器：地址寄存器 MAR、数据寄存器 MDR
+关于运算器：核心是 ALU，包含若干通用寄存器，累加器 ACC、乘商寄存器 MQ 等
+关于控制器：由程序计数器 PC、指令寄存器 IR、控制单元 CU 组成
+
+
+指令和数据以同等地位存储在存储器中
+
+控制器根据指令周期的不同阶段，来区分指令与数据
+
+取址周期取的指令，执行周期取的数据
+
+
+
+
+指令和数据均用二进制代码表示。指令由操作码和地址码组成
+采用 “存储程序” 的工作方式，将程序和原始数据送入主存后执行。运行过程无需人的干预
+
+计算机软件，
+
+软件按功能分类：系统软件（例如操作系统、数据库管理系统）、应用软件（用户使用）
+三个级别的语言：机器语言（机器可直接执行），汇编语言，高级语言
+翻译程序，将语言转换为机器语言的程序：
+
+汇编程序（汇编器），翻译汇编语言
+解释程序（解释器），将高级语言语句逐条翻译
+编译程序（编译器），将高级语言程序翻译成汇编语言或机器语言 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-07-31T16:00:00.000Z" title="发表于 2022-08-01 00:00:00">2022-08-01</time></span></div><div class="content">这里就是一切的开始。以下是自动生成的内容。
+
+Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+ Quick Start
+ Create a new post
+1$ hexo new &quot;My New Post&quot;
+More info: Writing
+ Run server
+1$ hexo server
+More info: Server
+ Generate static files
+1$ hexo generate
+More info: Generating
+ Deploy to remote sites
+1$ hexo deploy
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/10/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#content-inner">10</a><span class="page-number current">11</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">HiDolen</div><div class="author-info__description">HiDolen 的个人博客。平时写的笔记都在这里</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">110</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">45</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">46</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Markdown/"><span class="card-category-list-name">Markdown</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E4%BB%96/"><span class="card-category-list-name">其他</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">程序</span><span class="card-category-list-count">75</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/AndroidStudio/"><span class="card-category-list-name">AndroidStudio</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/Kotlin/"><span class="card-category-list-name">Kotlin</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/Linux/%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8C%87%E4%BB%A4/"><span class="card-category-list-name">工具与指令</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">26</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/408/" style="font-size: 1.18em; color: #999ca0">408</a> <a href="/tags/AndroidStudio/" style="font-size: 1.13em; color: #999a9b">AndroidStudio</a> <a href="/tags/DOTween/" style="font-size: 1.2em; color: #999da3">DOTween</a> <a href="/tags/Kotlin/" style="font-size: 1.1em; color: #999">Kotlin</a> <a href="/tags/Linux/" style="font-size: 1.1em; color: #999">Linux</a> <a href="/tags/Markdown/" style="font-size: 1.1em; color: #999">Markdown</a> <a href="/tags/Pygame/" style="font-size: 1.18em; color: #999ca0">Pygame</a> <a href="/tags/Python/" style="font-size: 1.45em; color: #99a7ba">Python</a> <a href="/tags/Shader%E5%AD%A6%E4%B9%A0/" style="font-size: 1.4em; color: #99a5b6">Shader学习</a> <a href="/tags/Unity/" style="font-size: 1.48em; color: #99a8bd">Unity</a> <a href="/tags/UnityEngine/" style="font-size: 1.15em; color: #999b9e">UnityEngine</a> <a href="/tags/adb/" style="font-size: 1.1em; color: #999">adb</a> <a href="/tags/git%E7%9B%B8%E5%85%B3/" style="font-size: 1.1em; color: #999">git相关</a> <a href="/tags/numpy/" style="font-size: 1.13em; color: #999a9b">numpy</a> <a href="/tags/threading/" style="font-size: 1.1em; color: #999">threading</a> <a href="/tags/torch/" style="font-size: 1.1em; color: #999">torch</a> <a href="/tags/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/" style="font-size: 1.38em; color: #99a4b3">书籍-UnityShader入门精要</a> <a href="/tags/%E5%85%89%E7%85%A7/" style="font-size: 1.1em; color: #999">光照</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 1.13em; color: #999a9b">其他</a> <a href="/tags/%E5%87%BD%E6%95%B0%E4%BB%AC/" style="font-size: 1.18em; color: #999ca0">函数们</a> <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/" style="font-size: 1.32em; color: #99a2ae">大三上</a> <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8B/" style="font-size: 1.25em; color: #999fa7">大三下</a> <a href="/tags/%E5%A4%A7%E5%9B%9B%E4%B8%8A/" style="font-size: 1.15em; color: #999b9e">大四上</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8C%87%E4%BB%A4/" style="font-size: 1.1em; color: #999">工具与指令</a> <a href="/tags/%E5%BA%93/" style="font-size: 1.35em; color: #99a3b1">库</a> <a href="/tags/%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/" style="font-size: 1.15em; color: #999b9e">微型计算机接口技术</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9FA/" style="font-size: 1.15em; color: #999b9e">操作系统A</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 1.23em; color: #999ea5">数学</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">深度学习</a> <a href="/tags/%E7%90%90%E5%B1%91/" style="font-size: 1.43em; color: #99a6b8">琐屑</a> <a href="/tags/%E7%90%90%E7%A2%8E/" style="font-size: 1.28em; color: #99a0aa">琐碎</a> <a href="/tags/%E7%A8%8B%E5%BA%8F/" style="font-size: 1.5em; color: #99a9bf">程序</a> <a href="/tags/%E7%AC%AC10%E7%AB%A0-%E9%AB%98%E7%BA%A7%E7%BA%B9%E7%90%86/" style="font-size: 1.1em; color: #999">第10章_高级纹理</a> <a href="/tags/%E7%AC%AC11%E7%AB%A0-%E7%BA%B9%E7%90%86%E5%8A%A8%E7%94%BB/" style="font-size: 1.1em; color: #999">第11章_纹理动画</a> <a href="/tags/%E7%AC%AC12%E7%AB%A0-%E5%B1%8F%E5%B9%95%E5%90%8E%E5%A4%84%E7%90%86%E6%95%88%E6%9E%9C/" style="font-size: 1.1em; color: #999">第12章_屏幕后处理效果</a> <a href="/tags/%E7%AC%AC13%E7%AB%A0-%E4%BD%BF%E7%94%A8%E6%B7%B1%E5%BA%A6%E5%92%8C%E6%B3%95%E7%BA%BF%E7%BA%B9%E7%90%86/" style="font-size: 1.1em; color: #999">第13章_使用深度和法线纹理</a> <a href="/tags/%E7%AC%AC7%E7%AB%A0-%E5%9F%BA%E7%A1%80%E7%BA%B9%E7%90%86/" style="font-size: 1.1em; color: #999">第7章_基础纹理</a> <a href="/tags/%E7%AC%AC8%E7%AB%A0-%E9%80%8F%E6%98%8E%E6%95%88%E6%9E%9C/" style="font-size: 1.1em; color: #999">第8章_透明效果</a> <a href="/tags/%E7%AC%AC9%E7%AB%A0-%E6%9B%B4%E5%A4%8D%E6%9D%82%E7%9A%84%E5%85%89%E7%85%A7/" style="font-size: 1.1em; color: #999">第9章_更复杂的光照</a> <a href="/tags/%E7%BB%84%E4%BB%B6%E4%BB%AC/" style="font-size: 1.3em; color: #99a1ac">组件们</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">109</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">110</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-01T01:09:15.300Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By HiDolen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

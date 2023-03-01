@@ -1,0 +1,401 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>时间·线 - HiDolen 写的些东西</title><meta name="keywords" content="个人博客,Unity,Python,大学,考研"><meta name="author" content="HiDolen"><meta name="copyright" content="HiDolen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="HiDolen 的个人博客。平时写的笔记都在这里">
+<meta property="og:type" content="website">
+<meta property="og:title" content="时间·线">
+<meta property="og:url" content="http://example.com/page/7/index.html">
+<meta property="og:site_name" content="时间·线">
+<meta property="og:description" content="HiDolen 的个人博客。平时写的笔记都在这里">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:author" content="HiDolen">
+<meta property="article:tag" content="个人博客,Unity,Python,大学,考研">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/page/7/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '时间·线',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-01 09:09:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">110</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">45</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">46</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">时间·线</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">时间·线</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/Shader%E7%9A%84%E4%B8%80%E4%BA%9B%E8%A7%84%E8%8C%83/" title="Shader的一些规范">Shader的一些规范</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/">琐屑</a></span></div><div class="content"> 三种精度的数值类型
+分别为 float、half 和 fixed。
+
+
+
+类型
+精度
+
+
+
+
+float
+使用 32 位存储
+
+
+half
+使用 16 位存储，精度范围 -60000 ~ +60000
+
+
+fixed
+使用 11 位 存储，精度范围 -2.0 ~ +2.0
+
+
+
+大多数桌面级 GPU 在计算时会一视同仁，都是 float。但在移动平台的 GPU 上不同类型会影响运算速度。
+ 避免不必要的计算
+Shader 中不应进行过多的计算，防止需要的寄存器数目或指令数目超过了当前可支持的数目。
+不同的 Shader Target、不同的着色器阶段，可用的临时寄存器和指令数目都是不同的。
+Unity 支持的一些 Shader Target：
+
+
+
+指令
+描述
+
+
+
+
+#pragma target 2.0
+默认值。不支持对顶点纹理的采样，不支持显式的 LOD 纹理采样等
+
+
+#pragma target 3.0
+支持对顶点纹理的采样等
+
+
+#pragma target 4.0
+支持几何着色器等
+
+
+#pragma target 5.0
+
+
+
+
+ 慎用分支和循环
+GPU 支持使用 if ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/step()%E6%9B%BF%E4%BB%A3if/" title="step()替代if">step()替代if</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/">琐屑</a></span></div><div class="content">step() 的逻辑如下：
+1234567891011step (a, x)&#123;  if (x &lt; a)   &#123;    return 0;  &#125;  else  &#123;    return 1;  &#125;&#125;
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/%E5%9D%90%E6%A0%87%E7%A9%BA%E9%97%B4%E8%BD%AC%E6%8D%A2%E6%96%B9%E6%B3%95/" title="坐标空间转换方法">坐标空间转换方法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/">琐屑</a></span></div><div class="content">
+ shader基础
+ shader空间坐标介绍
+ 未完成的空间转换表
+ 数据类型
+
+
+
+名称
+shader中的变量名
+数据类型
+说明
+
+
+
+
+vertex
+POSITION
+float4
+顶点在空间中的位置
+
+
+normal
+NORMAL
+float4
+垂直于顶点的直线
+
+
+tengent
+TANGENT
+float4
+与顶点的法线垂直
+
+
+Direction
+float3
+
+顶点在空间中的朝向
+
+
+Destance
+float3
+
+两点之间的距离
+
+
+texcoord
+TEXCOORD0
+float4
+处理贴图的UV坐标
+
+
+
+ 模型空间
+
+
+
+输出空间
+世界空间
+观察空间
+裁剪空间
+
+
+
+
+坐标
+mul(unity_ObjectToWorld, v.vertex) = mul(UNITY_MATRIX_M, 方向或坐标)
+`float4 UnityObjectToViewPos(float4) = mul(UNITY_MATRIX_MV,顶点或方向)
+mul(UNITY_MATRIX_MVP, 顶点或方向)`
+
+
+方向
+float3 UnityObjectToWorldDir(f ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/%E9%80%86%E7%9F%A9%E9%98%B5%E7%9A%84%E5%9D%91/" title="逆矩阵的坑">逆矩阵的坑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/">琐屑</a></span></div><div class="content"> _World2Object 与 normal
+首先说，_World2Object 已经被新版本 Unity 替代了，成了 unity_WorldToObject，请注意。
+_World2Object 矩阵是 _Object2World 矩阵的逆矩阵。以下代码是等价的：
+
+
+o.worldNormal = mul(v.normal, (float3x3)unity_WorldToObject);
+o.worldNormal = mul(transpose((float3x3)unity_WorldToObject), v.normal);
+
+
+第一行代码的置换矩阵在右侧，一般转换矩阵在左侧。
+为了避免等比缩放矢量，保证矢量垂直，需要这样做。
+
+设 unity_ObjectToWorld 为 MMM，n⃗\vec{n}n 转世界空间矩阵为 GGG，我们最终的目的是希望转换后的 t′⃗\vec{t^{&#x27;}}t′ 与 n′⃗\vec{n^{&#x27;}}n′依旧保持垂直关系，所以
+Mt⃗⋅Gn⃗=0M\vec{t}\cdot G\vec{n}=0Mt⋅Gn=0,
+用矩阵的写法表示 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/%E8%83%8C%E9%9D%A2%E5%89%94%E9%99%A4/" title="背面剔除">背面剔除</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%90%90%E5%B1%91/">琐屑</a></span></div><div class="content"> 背面剔除
+unity 默认会自动剔除背面，不渲染。
+若需要显示背面，需要Cull off进行关闭。示例代码如下：
+12345678910111213141516171819202122232425262728293031Shader &quot;My/MyFirstShader&quot;&#123;    Properties    &#123;        _Color(&quot;color&quot;,Color) = (1,1,1,1)        _MainTex (&quot;Texture&quot;, 2D) = &quot;white&quot; &#123;&#125;    &#125;    SubShader    &#123;        cull off //关闭背面剔除        Pass        &#123;            CGPROGRAM            #pragma vertex vert //指定顶点着色器的名字            #pragma fragment frag //指定片段着色器的名字    ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC10%E7%AB%A0_%E9%AB%98%E7%BA%A7%E7%BA%B9%E7%90%86/%E7%AC%AC10%E7%AB%A0_%E9%AB%98%E7%BA%A7%E7%BA%B9%E7%90%86/" title="第10章_高级纹理">第10章_高级纹理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC10%E7%AB%A0-%E9%AB%98%E7%BA%A7%E7%BA%B9%E7%90%86/">第10章_高级纹理</a></span></div><div class="content">之前学到的法线纹理、渐变纹理和这招纹理，都属于低维（一维或二维）纹理
+ 立方体纹理（Cubemap）
+在图形学中，立方体纹理是环境映射（Environment Mapping）的一种实现方式，可以模拟物体周围的环境。
+立方体纹理最常见于天空盒子，以及环境映射。
+ 天空盒子（Skybox）
+要创建 Skybox 材质，先新建材质，然后 Shader 选择 Unity 自带的 Skybox/6 Sided。
+要设置 Unity 全局的 Skybox，在 Window → Lighting → Skybox 中设置。
+要单独设置摄像机显示的 Skybox，可以给摄像机添加组件 Skybox 覆盖全局设置。
+ 环境映射
+通过环境映射，可以模拟出金属质感的材质。
+创建环境映射的立方体纹理，有三种方法：
+
+提供一张具有特殊布局的纹理，例如类似立方体展开图的交叉布局、全景布局等。然后，把纹理的 Texture Type 设置为 Cubemap
+
+在基于物理的渲染中，通常使用一张 HDR 图像来生成高质量的 Cubemap
+可以对纹理数据进行压缩，支持边缘修正、官方反射（glossy reflecti ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC11%E7%AB%A0_%E7%BA%B9%E7%90%86%E5%8A%A8%E7%94%BB/%E7%AC%AC11%E7%AB%A0_%E7%BA%B9%E7%90%86%E5%8A%A8%E7%94%BB/" title="第11章_纹理动画">第11章_纹理动画</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC11%E7%AB%A0-%E7%BA%B9%E7%90%86%E5%8A%A8%E7%94%BB/">第11章_纹理动画</a></span></div><div class="content"> Unity Shader 中的内置变量
+时间：
+
+
+
+名称
+类型
+描述
+
+
+
+
+_Time
+float4
+t：自场景加载开始所经过的时间。(t/20, t, 2t, 3t)
+
+
+SinTime
+float4
+t：时间的正弦值。(t/8,t/4,t/2,t)
+
+
+CosTime
+float4
+t：时间的余弦值。(t/8,t/4,t/2,t)
+
+
+unity_DeltaTime
+float4
+dt：时间增量。(dt, 1/dt, smoothDt, 1/smoothDt)
+
+
+
+ 纹理动画
+ 序列帧动画
+依次播放一系列关键帧图像。
+示例文件见 Chapter11-ImageSequenceAnimation.shader。
+ 循环滚动的背景
+第一张纹理在后面，第二张纹理在前面。先在顶点着色器计算纹理偏移。
+12o.uv.xy = TRANSFORM_TEX(v.texcoord, _MainTex) + frac(float2(_ScrollX, 0.0) * _Time.y);o.uv.zw = TRANSFORM_TEX(v.texcoord, _DetailTex) + frac( ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC13%E7%AB%A0_%E4%BD%BF%E7%94%A8%E6%B7%B1%E5%BA%A6%E5%92%8C%E6%B3%95%E7%BA%BF%E7%BA%B9%E7%90%86/%E7%AC%AC13%E7%AB%A0_%E4%BD%BF%E7%94%A8%E6%B7%B1%E5%BA%A6%E5%92%8C%E6%B3%95%E7%BA%BF%E7%BA%B9%E7%90%86/" title="第13章_使用深度和法线纹理">第13章_使用深度和法线纹理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC13%E7%AB%A0-%E4%BD%BF%E7%94%A8%E6%B7%B1%E5%BA%A6%E5%92%8C%E6%B3%95%E7%BA%BF%E7%BA%B9%E7%90%86/">第13章_使用深度和法线纹理</a></span></div><div class="content"> 获取深度和法线纹理
+屏幕后处理，除了使用屏幕图像颜色信息，还可以用上深度纹理和法线纹理。
+设备坐标（Normalized Device Coordinates, NDC），深度值来自于顶点变换后得到的归一化设备坐标。
+由于 NDC 中 z 分量的范围在 [-1, 1]，为了让值能存储在一张图里，使用公式进行映射：
+d=0.5⋅zndc+0.5d=0.5·z_{ndc}+0.5
+d=0.5⋅zndc​+0.5
+Unity 如何得到深度纹理：
+
+使用延迟渲染路径时，深度纹理信息可以通过读取 G-buffer 得到
+当无法直接获取深度缓存时，深度和法线纹理是通过一个单独的 Pass 渲染得来的。
+
+Unity 使用着色器替换技术选择渲染类型为 Opaque 的物体（查看 Subshader 的 RenderType 标签），判断它们使用的渲染队列是否小于 2500（Background、Geometry、AlphaTest 渲染队列都在这个范围内）。若条件满足，就渲染到深度和法线纹理中
+这要求物体的 Shader 设置了正确的 RenderType 标签，并包含 LightMode 为 S ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC12%E7%AB%A0_%E5%B1%8F%E5%B9%95%E5%90%8E%E5%A4%84%E7%90%86%E6%95%88%E6%9E%9C/%E7%AC%AC12%E7%AB%A0_%E5%B1%8F%E5%B9%95%E5%90%8E%E5%A4%84%E7%90%86%E6%95%88%E6%9E%9C/" title="第12章_屏幕后处理效果">第12章_屏幕后处理效果</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC12%E7%AB%A0-%E5%B1%8F%E5%B9%95%E5%90%8E%E5%A4%84%E7%90%86%E6%95%88%E6%9E%9C/">第12章_屏幕后处理效果</a></span></div><div class="content"> 屏幕后处理效果（screen post-processing effects）
+在渲染完整个场景得到屏幕图像之后，再对图像进行一系列操作。
+例如景深（Depth of Field）、运动模糊（Motion Blur）。
+对于移动平台，屏幕后处理相当消耗性能。即使只是调用 OnRenderImage() 函数不写入任何东西，也会降低很多性能。好像可以考虑用 Screen Overlay 作为替代方案。
+ 屏幕后处理的脚本
+使用 OnRenderImage() 函数接口（它像 Update() 一样使用）。函数声明如下：
+1MonoBehaviour.OnRenderImage(RenderTexture src, RenderTexture dest);
+函数被调用后，Unity 会把当前渲染得到的图像存储在第一个参数对应的源渲染纹理中，并将经过函数中代码一系列操作后的目标渲染纹理，即第二个参数对应的渲染纹理显示到屏幕上。
+在 OnRenderImage() 内使用函数 Graphics.Blit 完成纹理处理。
+123public static void Blit(Texture s ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/%5Bobject%20Object%5D/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC7%E7%AB%A0_%E5%9F%BA%E7%A1%80%E7%BA%B9%E7%90%86/%E7%AC%AC7%E7%AB%A0_%E5%9F%BA%E7%A1%80%E7%BA%B9%E7%90%86/" title="第7章_基础纹理">第7章_基础纹理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-09-08T06:42:40.000Z" title="发表于 2022-09-08 14:42:40">2022-09-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/">程序</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/">Unity</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/">Shader学习</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/">书籍-UnityShader入门精要</a><i class="fas fa-angle-right article-meta-link"></i><a class="article-meta__categories" href="/categories/%E7%A8%8B%E5%BA%8F/Unity/Shader%E5%AD%A6%E4%B9%A0/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/%E7%AC%AC7%E7%AB%A0-%E5%9F%BA%E7%A1%80%E7%BA%B9%E7%90%86/">第7章_基础纹理</a></span></div><div class="content"> 纹理概述
+
+UV坐标，纹理映射坐标（texture-mapping coordinates）。
+
+通常使用一个二维变量 (u, v) 表示，分别为横坐标、纵坐标
+通常被归一化到 [0, 1] 的范围，但超出范围是很重要的技巧
+Unity 中，原点位于纹理左下角
+
+
+纹理资源的 Inspector
+
+向 Unity 导入一张纹理后，可在材质面板上修改其属性
+Texture Type，纹理类型，默认为 Normal
+
+设置为对应类型使得 Unity 可以针对性优化
+
+
+Wrap Mode，设置纹理坐标（Offset）超过 [0, 1] 时的动作
+
+
+以下一系列操作需要 Shader 中有这样的代码：
+12o.uv.xy = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;//或者直接 o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
+
+
+默认为 Repeat，例如纹理坐标为 [-0.4, 1.75] 会被转换为 [0.4, 0.75]
+
+在使用 Tiling 属性时，Repeat 下的纹理会多次出现
+
+ ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/6/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/#content-inner">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#content-inner">11</a><a class="extend next" rel="next" href="/page/8/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">HiDolen</div><div class="author-info__description">HiDolen 的个人博客。平时写的笔记都在这里</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">110</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">45</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">46</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Markdown/"><span class="card-category-list-name">Markdown</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E4%BB%96/"><span class="card-category-list-name">其他</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/"><span class="card-category-list-name">程序</span><span class="card-category-list-count">75</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/AndroidStudio/"><span class="card-category-list-name">AndroidStudio</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/Kotlin/"><span class="card-category-list-name">Kotlin</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/Linux/"><span class="card-category-list-name">Linux</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/Linux/%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8C%87%E4%BB%A4/"><span class="card-category-list-name">工具与指令</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%A8%8B%E5%BA%8F/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">26</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/408/" style="font-size: 1.18em; color: #999ca0">408</a> <a href="/tags/AndroidStudio/" style="font-size: 1.13em; color: #999a9b">AndroidStudio</a> <a href="/tags/DOTween/" style="font-size: 1.2em; color: #999da3">DOTween</a> <a href="/tags/Kotlin/" style="font-size: 1.1em; color: #999">Kotlin</a> <a href="/tags/Linux/" style="font-size: 1.1em; color: #999">Linux</a> <a href="/tags/Markdown/" style="font-size: 1.1em; color: #999">Markdown</a> <a href="/tags/Pygame/" style="font-size: 1.18em; color: #999ca0">Pygame</a> <a href="/tags/Python/" style="font-size: 1.45em; color: #99a7ba">Python</a> <a href="/tags/Shader%E5%AD%A6%E4%B9%A0/" style="font-size: 1.4em; color: #99a5b6">Shader学习</a> <a href="/tags/Unity/" style="font-size: 1.48em; color: #99a8bd">Unity</a> <a href="/tags/UnityEngine/" style="font-size: 1.15em; color: #999b9e">UnityEngine</a> <a href="/tags/adb/" style="font-size: 1.1em; color: #999">adb</a> <a href="/tags/git%E7%9B%B8%E5%85%B3/" style="font-size: 1.1em; color: #999">git相关</a> <a href="/tags/numpy/" style="font-size: 1.13em; color: #999a9b">numpy</a> <a href="/tags/threading/" style="font-size: 1.1em; color: #999">threading</a> <a href="/tags/torch/" style="font-size: 1.1em; color: #999">torch</a> <a href="/tags/%E4%B9%A6%E7%B1%8D-UnityShader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81/" style="font-size: 1.38em; color: #99a4b3">书籍-UnityShader入门精要</a> <a href="/tags/%E5%85%89%E7%85%A7/" style="font-size: 1.1em; color: #999">光照</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 1.13em; color: #999a9b">其他</a> <a href="/tags/%E5%87%BD%E6%95%B0%E4%BB%AC/" style="font-size: 1.18em; color: #999ca0">函数们</a> <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8A/" style="font-size: 1.32em; color: #99a2ae">大三上</a> <a href="/tags/%E5%A4%A7%E4%B8%89%E4%B8%8B/" style="font-size: 1.25em; color: #999fa7">大三下</a> <a href="/tags/%E5%A4%A7%E5%9B%9B%E4%B8%8A/" style="font-size: 1.15em; color: #999b9e">大四上</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E4%B8%8E%E6%8C%87%E4%BB%A4/" style="font-size: 1.1em; color: #999">工具与指令</a> <a href="/tags/%E5%BA%93/" style="font-size: 1.35em; color: #99a3b1">库</a> <a href="/tags/%E5%BE%AE%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/" style="font-size: 1.15em; color: #999b9e">微型计算机接口技术</a> <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9FA/" style="font-size: 1.15em; color: #999b9e">操作系统A</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 1.23em; color: #999ea5">数学</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.1em; color: #999">深度学习</a> <a href="/tags/%E7%90%90%E5%B1%91/" style="font-size: 1.43em; color: #99a6b8">琐屑</a> <a href="/tags/%E7%90%90%E7%A2%8E/" style="font-size: 1.28em; color: #99a0aa">琐碎</a> <a href="/tags/%E7%A8%8B%E5%BA%8F/" style="font-size: 1.5em; color: #99a9bf">程序</a> <a href="/tags/%E7%AC%AC10%E7%AB%A0-%E9%AB%98%E7%BA%A7%E7%BA%B9%E7%90%86/" style="font-size: 1.1em; color: #999">第10章_高级纹理</a> <a href="/tags/%E7%AC%AC11%E7%AB%A0-%E7%BA%B9%E7%90%86%E5%8A%A8%E7%94%BB/" style="font-size: 1.1em; color: #999">第11章_纹理动画</a> <a href="/tags/%E7%AC%AC12%E7%AB%A0-%E5%B1%8F%E5%B9%95%E5%90%8E%E5%A4%84%E7%90%86%E6%95%88%E6%9E%9C/" style="font-size: 1.1em; color: #999">第12章_屏幕后处理效果</a> <a href="/tags/%E7%AC%AC13%E7%AB%A0-%E4%BD%BF%E7%94%A8%E6%B7%B1%E5%BA%A6%E5%92%8C%E6%B3%95%E7%BA%BF%E7%BA%B9%E7%90%86/" style="font-size: 1.1em; color: #999">第13章_使用深度和法线纹理</a> <a href="/tags/%E7%AC%AC7%E7%AB%A0-%E5%9F%BA%E7%A1%80%E7%BA%B9%E7%90%86/" style="font-size: 1.1em; color: #999">第7章_基础纹理</a> <a href="/tags/%E7%AC%AC8%E7%AB%A0-%E9%80%8F%E6%98%8E%E6%95%88%E6%9E%9C/" style="font-size: 1.1em; color: #999">第8章_透明效果</a> <a href="/tags/%E7%AC%AC9%E7%AB%A0-%E6%9B%B4%E5%A4%8D%E6%9D%82%E7%9A%84%E5%85%89%E7%85%A7/" style="font-size: 1.1em; color: #999">第9章_更复杂的光照</a> <a href="/tags/%E7%BB%84%E4%BB%B6%E4%BB%AC/" style="font-size: 1.3em; color: #99a1ac">组件们</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">109</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/08/"><span class="card-archive-list-date">八月 2022</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">110</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-01T01:09:15.300Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By HiDolen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
